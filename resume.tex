@@ -1,0 +1,260 @@
+\documentclass[letterpaper,11pt]{article}
+
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[pdftex]{hyperref}
+\usepackage{fancyhdr}
+\usepackage{graphicx,scalerel}
+\usepackage[utf8]{inputenc}
+\usepackage{graphicx,xcolor,fontawesome}
+\usepackage{makecell}
+
+\pagestyle{fancy}
+\fancyhf{}
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+% Adjust margins
+\addtolength{\oddsidemargin}{-0.375in}
+\addtolength{\evensidemargin}{-0.375in}
+\addtolength{\textwidth}{1in}
+\addtolength{\topmargin}{-.5in}
+\addtolength{\textheight}{1.0in}
+
+\urlstyle{same}
+
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Sections formatting
+\titleformat{\section}{
+  \vspace{-4pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+
+%-------------------------
+% Custom commands
+
+\newcommand\ssbullet[1][.6]{\mathbin{\ThisStyle{\vcenter{\hbox{%
+
+          \scalebox{#1}{$\SavedStyle\bullet$}}}}}%
+}
+\renewcommand{\labelitemii}{\(\ssbullet\)}
+\renewcommand\cellalign{rc}
+
+\newcommand{\resumeItem}[1]{
+  \item\small{
+    {#1 \vspace{-2pt}}
+  }
+}
+
+\newcommand{\skillsItem}[1]{
+  \item\small{
+    {#1 \vspace{-6pt}}
+  }
+}
+
+\newcommand{\resumeSubheading}[5]{
+  \vspace{-1pt}\item
+  \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+    \textbf{#1} & #2 \\
+    \small{#3 | \textit{#4}} & \small {#5} \\
+  \end{tabular*}\vspace{-5pt}
+}
+
+\newcommand{\resumeSubItem}[2]{\resumeItem{#1}\vspace{-4pt}}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=*,label={}]}
+    \newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}}
+    \newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+
+\newcommand{\projectItem}[1]{
+  \item\small{
+    {#1 \vspace{-2pt}}
+  }
+}
+
+\newcommand{\projectSubheading}[4]{
+  \vspace{-1pt}\item
+  \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+    \href{#4}{\textbf{#1} | \textit{#2}} &
+    #3\\
+  \end{tabular*}\vspace{-5pt}
+}
+
+\newcommand{\projectSubItem}[2]{\projectItem{#1}{#2}\vspace{-4pt}}
+
+\newcommand{\projectSubHeadingListStart}{\begin{itemize}[leftmargin=*,label={}]
+    }
+    \newcommand{\projectSubHeadingListEnd}{\end{itemize}}
+\newcommand{\projectItemListStart}{\begin{itemize}}
+    \newcommand{\projectItemListEnd}{\end{itemize}\vspace{-5pt}}
+
+\newcommand{\seticon}[1]{\textcolor{black}{\csname #1\endcsname}}
+
+%-------------------------------------------
+%%%%%%  RESUME STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{document}
+
+%----------HEADING-----------------
+\begin{center}
+  \textbf{\huge{Maaz Hashmi}} \\
+  \vspace*{0.4cm}
+  \seticon{faEnvelope}
+  \href{mailto:mhashmi373@gmail.com}{mhashmi373@gmail.com}\qquad
+  \seticon{faGithub} \href{https://github.com/maazh10}{GitHub}\qquad
+  \seticon{faLinkedinSquare}
+  \href{https://www.linkedin.com/in/maaz-hashmi-526a82222/}{LinkedIn}\qquad
+  \seticon{faPhoneSquare} +1 (431) 338-6120
+\end{center}
+
+%--------SKILLS------------
+\section{Skills}
+\resumeSubHeadingListStart
+\skillsItem
+{\textbf{Languages:} Python, Java, JavaScript/TypeScript, C, C++, SQL, Racket, Haskell, HTML, CSS, Solidity, PHP, LaTeX}
+\skillsItem
+{\textbf{Frameworks:} React (Native), Next.js Node.js, Express.js, Sass, Angular, SpringBoot, MongoDB, PostgreSQL, MSSQL}
+\skillsItem
+{\textbf{Tools:} Docker, Git, AWS, Android Studio, Wireshark, Metasploit, Maven, Jenkins, Postman, Jira, Web3, UNIX}
+\resumeSubHeadingListEnd
+
+%-----------EDUCATION-----------------
+\section{Education}
+\resumeSubHeadingListStart
+\resumeSubheading
+{University of Toronto - Honors Bachelor of Science}{Sep. 2020 -- Jun.
+  2024}
+{Major in Computer Science}{Specialization in Software Engineering
+  Stream}{Toronto, ON}
+\resumeItemListStart
+\resumeItem
+{\textbf{Awards:} University of Toronto Scholar, Fall 2021 Dean's
+  List}
+\resumeItemListEnd
+\resumeSubHeadingListEnd
+
+%-----------EXPERIENCE-----------------
+\section{Work Experience}
+
+\resumeSubHeadingListStart
+\resumeSubheading
+{Software Developer Co-op}{Jan. 2023 -- Apr. 2023}
+{Royal Bank of Canada}{Java, SpringBoot, Maven, Jenkins, Groovy, Dev-Ops,
+  JIRA, Git}{Toronto, ON}
+\resumeItemListStart
+\resumeItem
+{Maintained and enhanced SpringBoot apps for \textbf{4000+} RBC ATMs, ensuring robust mainframe transactions.}
+\resumeItem
+{Addressed and eliminated \textbf{22} Maven-related security flaws by their \textbf{CVE}s, securing the bank’s client data integrity.}
+\resumeItem
+{Led the upgrade of multiple backend apps from \textbf{Java 8} to \textbf{Java 17}, boosting performance and security standards.}
+\resumeItem{Automated \textbf{Jenkins} pipelines for \textbf{CI/CD} using \textbf{Groovy} scripts, reducing deployment time by \textbf{30\%}.}
+\resumeItemListEnd
+
+\resumeSubheading
+{Software Engineer Co-op/PT}{Jan. 2022 -- Dec. 2022}
+{University Health Network}{Python, MSSQL, ReactJS, PHP, LaTeX,
+  Git}{Toronto, ON}
+\resumeItemListStart
+\resumeItem
+{Maintained and developed numerous \textbf{Python} scripts for data extraction, automation and testing.}
+\resumeItem
+{Enhanced patient database integration with custom \textbf{Python} algorithms for over \textbf{600} records in SQL.}
+\resumeItem
+{Streamlined \textbf{LaTeX} report generation using \textbf{pandas}, improving documentation efficiency for medical professionals.}
+\resumeItem
+{Led a \textbf{ReactJS} website revamp with a contemporary UI, ensuring project delivery within stringent timelines.}
+\resumeItemListEnd
+
+\resumeSubheading
+{Teaching Assistant}{Jan. 2022 -- Present}
+{University of Toronto}{CSCC09, CSCC01, CSCB07, MATA32, MATA33, MATA34, MATA36}{Toronto, ON}
+\resumeItemListStart
+\resumeItem
+{Conducted weekly tutorial sessions with over \textbf{30} students
+  covering concepts in \textbf{software engineering}, \textbf{object oriented
+    programming} and \textbf{web development} using \textbf{Java}, \textbf{ReactJS}, \textbf{Node.js}, etc.}
+\resumeItemListEnd
+
+\resumeSubHeadingListEnd
+
+%-----------PROJECTS-----------------
+\section{Relevant Experience}
+
+\projectSubHeadingListStart
+
+\projectSubheading
+{\seticon{faGithub} Weast}{Python, SQLite, AWS S3/EC2, Docker, Papertail, OpenAI}
+{Jun. 2021 -- Present}{https://github.com/maazh10/KanyeWeast}
+\projectItemListStart
+\projectItem{}
+{Developed a multi-purpose \textbf{discord.py} bot in \textbf{Python} and \textbf{SQLite} for a public server with over \textbf{500} active users.}
+\projectItem{}
+{Streamlined image storage and retrieval using \textbf{AWS S3}, \textbf{Papertail} for logging, and \textbf{AWS EC2} for hosting.}
+\projectItemListEnd
+
+\projectSubheading{\seticon{faGithub} Langchain Open Source Contribution}{Python, tree-sitter}{Sep. 2023 - Dec. 2023}{https://github.com/langchain-ai/langchain/issues/11229}
+\projectItemListStart
+\projectItem{}
+{Contributed to an open-source LLM framework, by expanding language support in their LanguageParser module.}
+\projectItem{}
+{Used the \textbf{tree-sitter} library to parse code snippets in various languages, including Java, C++, Scala, Rust, etc.}
+\projectItemListEnd
+
+\projectSubheading{\seticon{faGithub} SpideyBot}{Python, tkinter, socket, rsa, tcp/udp}{Sep. 2023 - Dec. 2023}{https://github.com/maazh10/SpideyBot}
+\projectItemListStart
+\projectItem{}
+{Developed an AI chatbot, enabling exchange over selected network protocols \textbf{(TCP/UDP)} via socket programming.}
+\projectItem{}
+{Implemented asymmetric encryption using the \textbf{RSA} protocol for secure communication between clients and server.}
+\projectItemListEnd
+
+\projectSubheading
+{\seticon{faGithub} Scholarly}{TypeScript, Next.js, Node.js, PostgreSQL, Docker,
+  AWS Lightsail}
+{Jan. 2023 -- Apr. 2023}{https://github.com/maazh10/scholarly}
+\projectItemListStart
+\projectItem{}
+{Architectured and built a peer-to-peer video chat web application in \textbf{Next.js}
+  for live online tutoring using \textbf{PeerJS}.}
+\projectItem{}
+{Integrated with numerous APIs \textbf{(FullCalendar, Stripe, SendGrid)} and a \textbf{PostgreSQL} database for storage.}
+
+\projectItemListEnd
+
+\projectSubheading
+{\seticon{faGithub} Promedio}{ReactJS, Node.js, Express.js, MongoDB}
+{Sep. 2022 -- Dec.
+  2022}{https://github.com/UTSCCSCC01/finalprojectf22-team-promedio}
+\projectItemListStart
+\projectItem{}
+{Led a team of 6 in \textbf{web development} to assist \textbf{500+}
+  university students keep track of their grades and progress.}
+\projectItem{}
+{Engineered a \textbf{CRUD} API with \textbf{Express/Node.js}, adhering to \textbf{RESTful} principles, managing data in \textbf{MongoDB}.}
+\projectItemListEnd
+
+\projectSubheading
+{\seticon{faGithub} CartMax}{Java, Android Studio, Firebase, Mockito}
+{Sep. 2021 -- Dec. 2021}{https://github.com/maazh10/CartMax}
+\projectItemListStart
+\projectItem{}
+{Developed an \textbf{Android} application in \textbf{Java} to enable users to shop for groceries online during the pandemic.}
+\projectItem{}
+{Implemented a \textbf{Firebase} backend to store user data and
+  integrated \textbf{Mockito} for unit testing.}
+\projectItemListEnd
+
+\projectSubHeadingListEnd
+
+%-------------------------------------------
+\end{document}
