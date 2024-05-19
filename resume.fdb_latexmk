@@ -1,6 +1,6 @@
 # Fdb version 4
-["pdflatex"] 1715376221.58157 "/home/maazh/job_search/resume/resume.tex" "resume.pdf" "resume" 1715376222.25493 0
-  "/home/maazh/job_search/resume/resume.tex" 1715376220.68221 9321 e35d4d354559e5a48dad5f5b3b2d14b4 ""
+["pdflatex"] 1716087470.89871 "/home/maazh/job_search/resume/resume.tex" "resume.pdf" "resume" 1716087471.89412 0
+  "/home/maazh/job_search/resume/resume.tex" 1716087470.31748 9321 bf9a2a13c16d2f28f7891219104953a8 ""
   "/usr/share/texlive/texmf-dist/fonts/enc/dvips/fontawesome/fontawesometwo.enc" 1463430686 2679 32dd8ae231bf4a0752b98f62dc097183 ""
   "/usr/share/texlive/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/share/texlive/texmf-dist/fonts/tfm/public/cm/cmbx10.tfm" 1136768653 1328 c834bbb027764024c09d3d2bf908b5f0 ""
@@ -97,10 +97,10 @@
   "/usr/share/texlive/texmf-dist/tex/latex/xcolor/xcolor.sty" 1655066402 56148 51a9a8571c07b9921892ae11063ae853 ""
   "/usr/share/texlive/texmf-dist/web2c/texmf.cnf" 1706659200 40900 887e0dc8cac988a9e9c574af364cf837 ""
   "/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map" 1714194144.38399 4546198 e2884e9cfbb9cd1d1532fd8b068ec50b ""
-  "/var/lib/texmf/web2c/pdftex/pdflatex.fmt" 1714193815 7753246 0471818f67bc0a01b4823ce390fd942b ""
-  "resume.aux" 1715376222.1542 991 6e282de0e26fbc74503150e4d4a91caf "pdflatex"
-  "resume.out" 1715376222.1552 423 fc6a745a10ce2d4e05ae238c54056f61 "pdflatex"
-  "resume.tex" 1715376220.68221 9321 e35d4d354559e5a48dad5f5b3b2d14b4 ""
+  "/var/lib/texmf/web2c/pdftex/pdflatex.fmt" 1715469889 7753247 f1b9b97b6348c556b4f692a01b3e4224 ""
+  "resume.aux" 1716087471.72347 991 6e282de0e26fbc74503150e4d4a91caf "pdflatex"
+  "resume.out" 1716087471.72447 423 fc6a745a10ce2d4e05ae238c54056f61 "pdflatex"
+  "resume.tex" 1716087470.31748 9321 bf9a2a13c16d2f28f7891219104953a8 ""
   (generated)
   "resume.aux"
   "resume.log"
