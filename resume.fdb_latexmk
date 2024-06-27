@@ -1,6 +1,6 @@
 # Fdb version 4
-["pdflatex"] 1719513759.84399 "/home/maazh/job_search/resume/resume.tex" "resume.pdf" "resume" 1719513760.54938 0
-  "/home/maazh/job_search/resume/resume.tex" 1719513759.52008 8428 f6048c8081fa413ac123d0ecb45635d6 ""
+["pdflatex"] 1719514186.23091 "/home/maazh/job_search/resume/resume.tex" "resume.pdf" "resume" 1719514186.97772 0
+  "/home/maazh/job_search/resume/resume.tex" 1719514186.0192 8437 59a5ec6d298ecb56a28a7b17b6df6217 ""
   "/usr/share/texlive/texmf-dist/fonts/enc/dvips/fontawesome/fontawesometwo.enc" 1463430686 2679 32dd8ae231bf4a0752b98f62dc097183 ""
   "/usr/share/texlive/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/share/texlive/texmf-dist/fonts/tfm/public/cm/cmbx10.tfm" 1136768653 1328 c834bbb027764024c09d3d2bf908b5f0 ""
@@ -98,9 +98,9 @@
   "/usr/share/texlive/texmf-dist/web2c/texmf.cnf" 1714953600 40900 887e0dc8cac988a9e9c574af364cf837 ""
   "/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map" 1716230365.556 4546797 7fbd021eff59aabc2712c933b5dccd88 ""
   "/var/lib/texmf/web2c/pdftex/pdflatex.fmt" 1716230079 7753326 b8417fe0a8884bca10fb7b89622d30ab ""
-  "resume.aux" 1719513760.46008 991 6e282de0e26fbc74503150e4d4a91caf "pdflatex"
-  "resume.out" 1719513760.46108 423 fc6a745a10ce2d4e05ae238c54056f61 "pdflatex"
-  "resume.tex" 1719513759.52008 8428 f6048c8081fa413ac123d0ecb45635d6 ""
+  "resume.aux" 1719514186.8812 991 6e282de0e26fbc74503150e4d4a91caf "pdflatex"
+  "resume.out" 1719514186.8812 423 fc6a745a10ce2d4e05ae238c54056f61 "pdflatex"
+  "resume.tex" 1719514186.0192 8437 59a5ec6d298ecb56a28a7b17b6df6217 ""
   (generated)
   "resume.aux"
   "resume.log"
