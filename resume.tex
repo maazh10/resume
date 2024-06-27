@@ -81,11 +81,11 @@
   }
 }
 
-\newcommand{\projectSubheading}[4]{
+\newcommand{\projectSubheading}[5]{
   \vspace{-1pt}\item
   \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
     \href{#4}{\textbf{#1} | \textit{#2}} &
-    #3\\
+    #5 \\ \small{#3} \\
   \end{tabular*}\vspace{-5pt}
 }
 
@@ -107,7 +107,11 @@
 %----------HEADING-----------------
 \begin{center}
   \textbf{\huge{Maaz Hashmi}} \\
+  \begin{center}
+    Open Source Contributor | Full-Stack Developer
+  \end{center}
   \vspace*{0.4cm}
+  \seticon{faGlobe} \href{https://maazh.tech}{Website}\qquad
   \seticon{faEnvelope}
   \href{mailto:mhashmi373@gmail.com}{mhashmi373@gmail.com}\qquad
   \seticon{faGithub} \href{https://github.com/maazh10}{GitHub}\qquad
@@ -120,22 +124,26 @@
 \section{Skills}
 \resumeSubHeadingListStart
 \skillsItem
-{\textbf{Languages:} Python, Java, JavaScript/TypeScript, C, C++, SQL, Racket, Haskell, HTML, CSS, Solidity, PHP, LaTeX}
+{\textbf{Languages:} Python, Java, JavaScript/TypeScript, C, SQL, HTML, CSS}
 \skillsItem
-{\textbf{Frameworks:} React (Native), Next.js Node.js, Express.js, Sass, Angular, SpringBoot, MongoDB, PostgreSQL, MSSQL}
+{\textbf{Frameworks:} React (Native), Next.js, Node.js, Express.js, SpringBoot, MongoDB, PostgreSQL, MSSQL}
 \skillsItem
-{\textbf{Tools:} Docker, Git, AWS, Android Studio, Wireshark, Metasploit, Maven, Jenkins, Postman, Jira, Web3, UNIX}
+{\textbf{Tools:} Docker, Git, AWS, GitHub Actions, CI/CD, Android Studio, Maven, Jenkins, Jira}
 \resumeSubHeadingListEnd
 
 %-----------EDUCATION-----------------
 \section{Education}
 \resumeSubHeadingListStart
 \resumeSubheading
-{University of Toronto - Honors Bachelor of Science}{Sep. 2020 -- Jun.
+{University of Toronto - Honors Bachelor's of Science}{Sep. 2020 -- Jun.
   2024}
 {Major in Computer Science}{Specialization in Software Engineering
   Stream}{Toronto, ON}
 \resumeItemListStart
+\resumeItem
+{\textbf{Teaching Assistant} -- \textit{CSCC09, CSCC01, CSCB07, MATA32, MATA33, MATA34, MATA36} \\ Conducted weekly tutorial sessions with over \textbf{30} students
+  covering concepts in \textbf{software engineering}, \textbf{object oriented
+    programming} and \textbf{web development} using \textbf{Java}, \textbf{ReactJS}, \textbf{Node.js}, etc. }
 \resumeItem
 {\textbf{Awards:} University of Toronto Scholar, Fall 2021 Dean's
   List}
@@ -148,45 +156,27 @@
 \resumeSubHeadingListStart
 \resumeSubheading
 {Software Developer Co-op}{Jan. 2023 -- Apr. 2023}
-{Royal Bank of Canada}{Java, SpringBoot, Maven, Jenkins, Groovy, Dev-Ops,
+{Royal Bank of Canada}{Java, SpringBoot, Maven, Jenkins,
   JIRA, Git}{Toronto, ON}
 \resumeItemListStart
 \resumeItem
-{Developed and enhanced numerous \textbf{SpringBoot} applications
-  that powered mainframe verification and transactions at over \textbf{4000}
-  RBC ATM locations.}
+{Enhanced existing \textbf{Springboot} APIs that powered mainframe verification and transactions at RBC ATMs.}
 \resumeItem
-{Investigated and resolved \textbf{22} security vulnerabilities, caused by
-  specific \textbf{Maven} dependencies in the backend, down to \textbf{0} thereby mitigating
-  potential risks to the bank's internal and external client data.}
+{Investigated and resolved \textbf{22} critical security vulnerabilities in the codebase caused by specific \textbf{Maven} dependencies, twice as fast as estimated by the manager.}
 \resumeItem
-{Successfully migrated several backend applications from \textbf{Java
-    8} to \textbf{Java 17}, resulting in improved performance and security for
-  customers, and keeping the bank up-to-date with the latest technologies. }
+{Performed successful migration of legacy \textbf{Springboot} applications from \textbf{Java 8} to \textbf{Java 17} by rewriting incompatible code components into new syntax and updating sub-dependencies.}
 \resumeItemListEnd
 \resumeSubheading
-{Software Engineer Co-op/PT}{Jan. 2022 -- Dec. 2022}
+{Software Engineer Co-op/Part-Time}{Jan. 2022 -- Dec. 2022}
 {University Health Network}{Python, MSSQL, ReactJS, PHP, LaTeX,
   Git}{Toronto, ON}
 \resumeItemListStart
 \resumeItem
-{Maintained and developed numerous \textbf{Python} scripts for data extraction, automation and testing.}
+{Developed an automated \textbf{ETL} pipeline to transform custom clinical survey results into a normalized data model in \textbf{pandas} to enable standard data visualization practices.}
 \resumeItem
-{Enhanced master patient database integration with custom \textbf{Python} algorithms for over \textbf{600} records in \textbf{SQL}.}
+{Proactively increased the team's productivity by writing reusable scripts for generating clinical result reports.}
 \resumeItem
-{Streamlined \textbf{LaTeX} report generation using \textbf{pandas}, improving documentation efficiency for medical professionals.}
-\resumeItem
-{Led a \textbf{ReactJS} website revamp with a contemporary UI, ensuring project delivery within stringent timelines.}
-\resumeItemListEnd
-
-\resumeSubheading
-{Teaching Assistant}{Jan. 2022 -- Present}
-{University of Toronto}{CSCC09, CSCC01, CSCB07, MATA32, MATA33, MATA34, MATA36}{Toronto, ON}
-\resumeItemListStart
-\resumeItem
-{Conducted weekly tutorial sessions with over \textbf{30} students
-  covering concepts in \textbf{software engineering}, \textbf{object oriented
-    programming} and \textbf{web development} using \textbf{Java}, \textbf{ReactJS}, \textbf{Node.js}, etc.}
+{Commended by the team's manager for exceeding expectations and invited back as a part-time \textbf{Python} developer.}
 \resumeItemListEnd
 
 \resumeSubHeadingListEnd
@@ -196,61 +186,47 @@
 
 \projectSubHeadingListStart
 
-\projectSubheading
-{\seticon{faGithub} Weast}{Python, SQLite, AWS, Papertail, OpenAI}
-{Jun. 2021 -- Present}{https://github.com/maazh10/KanyeWeast}
+\projectSubheading{\seticon{faGithub} Langchain Open Source Contribution}
+{Python}
+{Popular LLM Library with over \textbf{88K} stars}
+{https://github.com/langchain-ai/langchain/pull/13318}
+{Sep. 2023 - Dec. 2023}
 \projectItemListStart
 \projectItem{}
-{Collaborated with a peer to build a multi-purpose \textbf{discord.py} bot in \textbf{python} and \textbf{SQLite} over \textbf{500} active users.}
+{Expanded language support in \textbf{Langchain} within the LanguageParser module to enable Retrieval Augmented Generation (RAG) with source code files in \textbf{12} programming languages.}
 \projectItem{}
-{Structured a robust \textbf{WebAPI} to store images on \textbf{AWS S3} resulting in \textbf{10\%} better time and space efficiency.}
+{Pull request reviewed and accepted within \textbf{2} months and merged into version 0.1.17.}
+\projectItemListEnd
+
+\projectSubheading
+{\seticon{faGithub} Weast}
+{Python, SQLite, AWS, Papertail, OpenAI}
+{ChatGPT Discord bot with over \textbf{500 active users}}
+{https://github.com/maazh10/KanyeWeast}
+{Jun. 2021 -- Present}
+\projectItemListStart
 \projectItem{}
-{Integrated a chatbot command using \textbf{OpenAI's ChatGPT API} for instant search and conversational queries
-  resulting a \textbf{30\%} increase in user interaction.}
+{Structured a robust WebAPI to store images on AWS S3 resulting in \textbf{10\%} better time and space efficiency.}
+\projectItem{}
+{Integrated a chatbot command using \textbf{OpenAI's ChatGPT API} for instant search and conversational queries resulting a \textbf{30\%} increase in user interaction.}
 \projectItem{}
 {Streamlined deployment by serving the project over an \textbf{AWS EC2} server using \textbf{Docker} containers and setup
-  CI/CD using \textbf{Github Actions}, resulting in a seamless experience for users.}
-\projectItemListEnd
-
-\projectSubheading{\seticon{faGithub} Langchain Open Source Contribution}{Python, tree-sitter}{Sep. 2023 - Dec. 2023}{https://github.com/langchain-ai/langchain/issues/11229}
-\projectItemListStart
-\projectItem{}
-{Collaborated with a team to expand language support in the LanguageParser module for the Langchain framework.}
-\projectItem{}
-{Used the \textbf{tree-sitter} library to parse code snippets in various languages, including Java, C++, Scala, Rust, etc.}
+  CI/CD using \textbf{GitHub Actions}, resulting in a seamless experience for users.}
 \projectItemListEnd
 
 \projectSubheading
-{\seticon{faGithub} Scholarly}{Next.js, Node.js, PostgreSQL, TypeScript, Docker,
-  AWS Lightsail}
-{Jan. 2023 -- Apr. 2023}{https://github.com/maazh10/scholarly}
+{\seticon{faGithub} Scholarly}
+{Next.js, Node.js, PostgreSQL, TypeScript, Docker, AWS Lightsail}
+{Real-time online tutoring application powered by \textbf{WebRTC}}
+{https://github.com/maazh10/scholarly}
+{Jan. 2023 -- Apr. 2023}
 \projectItemListStart
 \projectItem{}
-{Architectured and built a peer-to-peer video chat web application in \textbf{NextJS (React)}
-  for live online tutoring.}
+{Architectured real-time video chat using \textbf{WebRTC} for low-latency communication between students and tutors.}
 \projectItem{}
-{Implemented video chat functionality using \textbf{PeerJS},
-  and utlized numerous backend/frontend API's such as \textbf{Stripe,
-    FullCalendar, SendGrid} for additional features, paired with a robust
-  backend
-  architecture
-  using
-  \textbf{Node.js}/\textbf{TypeScript} and \textbf{PostgreSQL} to ensure
-  resilience and scalability. }
+{Implemented a production-ready payment system with \textbf{Stripe}, following best practices for asynchronous payment processing with webhooks.}
 \projectItem{}
-{Deployed the application using \textbf{Docker} containers and \textbf{Amazon
-    Lightsail} VM, ensuring ease of management.}
-\projectItemListEnd
-
-\projectSubheading
-{\seticon{faGithub} CartMax}{Java, Android Studio, Firebase, Mockito}
-{Sep. 2021 -- Dec. 2021}{https://github.com/maazh10/CartMax}
-\projectItemListStart
-\projectItem{}
-{Developed an \textbf{Android} application in \textbf{Java} to enable users to shop for groceries online during the pandemic.}
-\projectItem{}
-{Implemented a \textbf{Firebase} backend to store user data and
-  integrated \textbf{Mockito} for unit testing.}
+{Deployed the application using \textbf{Docker} and \textbf{Amazon Lightsail}, with \textbf{LetsEncrypt} TLS certificates.}
 \projectItemListEnd
 
 \projectSubHeadingListEnd
