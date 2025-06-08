@@ -35,7 +35,7 @@
 
 % Sections formatting
 \titleformat{\section}{
-  \vspace{-4pt}\scshape\raggedright\large
+  \vspace{\sectionspacing}\scshape\raggedright\large
 }{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
 
 %-------------------------
@@ -48,56 +48,69 @@
 \renewcommand{\labelitemii}{\(\ssbullet\)}
 \renewcommand\cellalign{rc}
 
-\newcommand{\resumeItem}[1]{
+% Common spacing parameters
+\newcommand{\itemspacing}{-2pt}
+\newcommand{\subitemspacing}{1pt}
+\newcommand{\subheadingspacing}{-2pt}
+\newcommand{\sectionspacing}{-15pt}
+
+% Base item command that others can build upon
+\newcommand{\baseItem}[2][\itemspacing]{
   \item\small{
-    {#1 \vspace{-2pt}}
+    {#2 \vspace{#1}}
   }
 }
 
-\newcommand{\skillsItem}[1]{
-  \item\small{
-    {#1 \vspace{-6pt}}
-  }
+% Unified list environment commands
+\newcommand{\customListStart}[1][\itemspacing]{
+  \begin{itemize}[leftmargin=*,label={}]
+  \setlength{\itemsep}{5pt}
 }
+\newcommand{\customListEnd}[1][\itemspacing]{
+  \end{itemize}\vspace{#1}
+}
+
+% Unified subheading command
+\newcommand{\customSubheading}[6]{
+  \vspace{-1pt}\item
+  \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+    #1 & #2 \\
+    \small{#3 | \textit{#4}} & \small {#5} \\
+    #6
+  \end{tabular*}\vspace{\subheadingspacing}
+}
+
+% Resume-specific commands
+\newcommand{\resumeItem}[1]{\baseItem{#1}}
+\newcommand{\resumeSubItem}[1]{\baseItem[\subitemspacing]{#1}}
 
 \newcommand{\resumeSubheading}[5]{
-  \vspace{-1pt}\item
-  \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
-    \textbf{#1} & #2 \\
-    \small{#3 | \textit{#4}} & \small {#5} \\
-  \end{tabular*}\vspace{-5pt}
+  \customSubheading{\textbf{#1}}{#2}{#3}{#4}{#5}{}
 }
 
-\newcommand{\resumeSubItem}[2]{\resumeItem{#1}\vspace{-4pt}}
-
-\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=*,label={}]}
-    \newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeSubHeadingListStart}{\customListStart}
+\newcommand{\resumeSubHeadingListEnd}{\customListEnd}
 \newcommand{\resumeItemListStart}{\begin{itemize}}
-    \newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{\subheadingspacing}}
 
-\newcommand{\projectItem}[1]{
-  \item\small{
-    {#1 \vspace{-2pt}}
-  }
-}
+% Project-specific commands
+\newcommand{\projectItem}[1]{\baseItem{#1}}
+\newcommand{\projectSubItem}[1]{\baseItem[\subitemspacing]{#1}}
 
 \newcommand{\projectSubheading}[5]{
-  \vspace{-1pt}\item
-  \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
-    \href{#4}{\textbf{#1} | \textit{#2}} &
-    #5 \\ \small{#3} \\
-  \end{tabular*}\vspace{-5pt}
+  \customSubheading{\href{#4}{\textbf{#1}}}{#5}{#3}{\textit{#2}}{}{}{}
 }
 
-\newcommand{\projectSubItem}[2]{\projectItem{#1}{#2}\vspace{-4pt}}
-
-\newcommand{\projectSubHeadingListStart}{\begin{itemize}[leftmargin=*,label={}]
-    }
-    \newcommand{\projectSubHeadingListEnd}{\end{itemize}}
+\newcommand{\projectSubHeadingListStart}{\customListStart}
+\newcommand{\projectSubHeadingListEnd}{\customListEnd}
 \newcommand{\projectItemListStart}{\begin{itemize}}
-    \newcommand{\projectItemListEnd}{\end{itemize}\vspace{-5pt}}
+\newcommand{\projectItemListEnd}{\end{itemize}\vspace{\subheadingspacing}}
 
-\newcommand{\seticon}[1]{\textcolor{black}{\csname #1\endcsname}}
+% Skills-specific command
+\newcommand{\skillsItem}[1]{\baseItem[-1pt]{#1}}
+
+% Enhanced icon command with color parameter
+\newcommand{\seticon}[2][black]{\textcolor{#1}{\csname #2\endcsname}}
 
 %-------------------------------------------
 %%%%%%  RESUME STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -193,13 +206,12 @@
 
 \projectSubheading
 {\seticon{faGithub} Scholarly}
-{Next.js, Node.js, PostgreSQL, TypeScript, Docker, AWS Lightsail}
+{Next.js, Node.js, PostgreSQL, AWS}
 {Real-time online tutoring application powered by \textbf{WebRTC}}
 {https://github.com/maazh10/scholarly}
 {Jan. 2023 -- Apr. 2023}
 \projectItemListStart
-\projectItem{}
-{Architectured real-time video chat using \textbf{WebRTC} for low-latency communication between students and tutors.}
+
 \projectItem{}
 {Implemented a production-ready \textbf{Stripe} payment system with asynchronous processing via \textbf{webhooks}.}
 \projectItem{}
