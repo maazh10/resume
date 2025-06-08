@@ -75,7 +75,7 @@
   \vspace{-1pt}\item
   \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
     #1 & #2 \\
-    \small{#3 | \textit{#4}} & \small {#5} \\
+    #3 | \textit{#4} & \small {#5} \\
     #6
   \end{tabular*}\vspace{\subheadingspacing}
 }
@@ -86,6 +86,27 @@
 
 \newcommand{\resumeSubheading}[5]{
   \customSubheading{\textbf{#1}}{#2}{#3}{#4}{#5}{}
+}
+
+\newcommand{\resumeConsultingSubheading}[5]{
+  \vspace{-1pt}\item
+  \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+    \textbf{#1} & #2 \\
+    #3 | #4 & \small {#5} \\
+  \end{tabular*}\vspace{\subheadingspacing}
+}
+
+\newcommand{\clientProjectHeader}[2]{
+  \item\small{
+    \textbf{#1} | \textit{#2} \vspace{-1pt}
+  }
+}
+
+\newcommand{\clientProjectSubItem}[1]{
+  \begin{itemize}[leftmargin=15pt, rightmargin=0pt, topsep=0pt, itemsep=1pt]
+    \item\small{#1}
+  \end{itemize}
+  \vspace{-1pt}
 }
 
 \newcommand{\resumeSubHeadingListStart}{\customListStart}
@@ -107,7 +128,7 @@
 \newcommand{\projectItemListEnd}{\end{itemize}\vspace{\subheadingspacing}}
 
 % Skills-specific command
-\newcommand{\skillsItem}[1]{\baseItem[-1pt]{#1}}
+\newcommand{\skillsItem}[1]{\baseItem[-5pt]{#1}}
 
 % Enhanced icon command with color parameter
 \newcommand{\seticon}[2][black]{\textcolor{#1}{\csname #2\endcsname}}
@@ -120,17 +141,17 @@
 %----------HEADING-----------------
 \begin{center}
   \textbf{\huge{Maaz Hashmi}} \\
-  \begin{center}
-    Open Source Contributor | Software Engineer | Full Stack Developer
-  \end{center}
+  \vspace{10pt}
   \seticon{faGlobe} \href{https://maazh.tech}{Website}\qquad
   \seticon{faGithub} \href{https://github.com/maazh10}{GitHub}\qquad
   \seticon{faLinkedinSquare}
   \href{https://www.linkedin.com/in/maaz-hashmi-526a82222/}{LinkedIn}\qquad
   \seticon{faEnvelope}
   \href{mailto:mhashmi373@gmail.com}{mhashmi373@gmail.com}\qquad
-  \seticon{faPhoneSquare} +1 (431) 338-6120
+  \seticon{faPhoneSquare} +1 (431) 338-6120\qquad
+  \seticon{faMapMarker} Toronto, ON
 \end{center}
+\vspace{1pt}
 
 %--------SKILLS------------
 \section{Skills}
@@ -138,26 +159,41 @@
 \skillsItem
 {\textbf{Languages:} Python, Java, JavaScript/TypeScript, C, SQL}
 \skillsItem
-{\textbf{Frameworks:} React (Native), Django, Next.js, Node.js, Express.js, Flask, HTMX, SpringBoot, MongoDB, PostgreSQL, MSSQL}
+{\textbf{Frameworks:} React (Native), Angular, Django, Next.js, Node.js, Express.js, Flask, SpringBoot}
+\skillsItem{\textbf{Databases:} MySQL, PostgreSQL, MSSQL, SQLite, MongoDB}
 \skillsItem
-{\textbf{Tools:} Git, Docker, Databricks, Kubernetes, Azure, AWS, Terraform, GitHub Actions, CI/CD, Maven, Jenkins, Jira, LaTeX}
+{\textbf{Tools:} Git, Docker, Databricks, Kubernetes, Azure, AWS, Terraform, GitHub Actions, Maven, Jenkins, Jira, LaTeX}
 \resumeSubHeadingListEnd
+\vspace{5pt}
 
 %-----------EXPERIENCE-----------------
 \section{Work Experience}
 
 \resumeSubHeadingListStart
 
-\resumeSubheading
+\resumeConsultingSubheading
 {Software Developer}{Aug. 2024 -- Present}
-{Electric Mind}{Python (Django/Flask), TypeScript (React/Node.js), SQL, Docker, Azure, Databricks}{Toronto, ON}
+{Electric Mind}{Business and Technology Consulting}{Toronto, ON}
 \resumeItemListStart
-\resumeItem
-{Developed a \textbf{Master Data Management} system for an insurance broker using \textbf{Django}, \textbf{SQL}, and \textbf{Azure} automating data ingestion, cleansing, and role-based approvals, significantly reducing the client's data management overhead by at least \textbf{30\%}.}
-\resumeItem
-{Designed and implemented an automated schema deployment framework with \textbf{Liquibase} and \textbf{Azure DevOps}, optimizing \textbf{SQL} schema migrations across environments and improving the client's deployment efficiency by \textbf{20-30\%}.}
-\resumeItem
-{Engineered an \textbf{AI} calling agent for automating fleet service appointments, streamlining the client's staff operations.}
+\clientProjectHeader
+{Gore Mutual}
+{Django, SQL, Azure, Databricks}
+\clientProjectSubItem
+{Developed a \textbf{Master Data Management} system automating data ingestion, cleansing, and role-based approvals, reducing client's data management overhead by \textbf{30\%}.}
+\clientProjectSubItem
+{Successfully delivered a production-ready application within a tight \textbf{3} month timeline while adhering to agile practices.}
+\clientProjectHeader
+{IMCO}
+{Liquibase, Azure DevOps, SparkSQL}
+\clientProjectSubItem
+{Designed and implemented automated schema deployment framework optimizing database migrations and improving the team's deployment efficiency by \textbf{20-30\%}.}
+\clientProjectSubItem
+{Efficiently engaged with the client's \textbf{QA/DevOps} teams while refining the framework to align with their critical pain points and facilitated multiple well-received demos.}
+\clientProjectHeader
+{RBC}
+{Angular, SpringBoot, Elasticsearch}
+\clientProjectSubItem
+{TBD}
 \resumeItemListEnd
 
 \resumeSubheading
@@ -216,19 +252,6 @@
 {Implemented a production-ready \textbf{Stripe} payment system with asynchronous processing via \textbf{webhooks}.}
 \projectItem{}
 {Deployed the application using \textbf{Docker} and \textbf{Amazon Lightsail}, with \textbf{LetsEncrypt} TLS certificates.}
-\projectItemListEnd
-
-\projectSubheading
-{\seticon{faGithub} Weast}
-{Python, SQLite, AWS, Papertail, OpenAI}
-{ChatGPT Discord bot with over \textbf{500 active users}}
-{https://github.com/maazh10/KanyeWeast}
-{Jun. 2021 -- Present}
-\projectItemListStart
-\projectItem{}
-{Integrated a chatbot command using the \textbf{GPT API} conversational queries resulting a \textbf{30\%} increase in user interaction.}
-\projectItem{}
-{Streamlined deployment by serving the project over an \textbf{AWS EC2} server using \textbf{Docker} containers and setup CI/CD using \textbf{GitHub Actions}, resulting in a seamless experience for users.}
 \projectItemListEnd
 
 \projectSubHeadingListEnd
