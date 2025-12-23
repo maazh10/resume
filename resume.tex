@@ -109,6 +109,15 @@
   \vspace{-1pt}
 }
 
+\newcommand{\resumePromotionSubheading}[6]{
+  \vspace{-1pt}\item
+  \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+    \textbf{#1} & #2 \\
+    #3 & \small {#4} \\
+    #5 & \small {#6} \\
+  \end{tabular*}\vspace{\subheadingspacing}
+}
+
 \newcommand{\resumeSubHeadingListStart}{\customListStart}
 \newcommand{\resumeSubHeadingListEnd}{\customListEnd}
 \newcommand{\resumeItemListStart}{\begin{itemize}}
@@ -173,9 +182,10 @@
 
 \resumeSubHeadingListStart
 
-\resumeConsultingSubheading
-{Software Developer}{Aug. 2024 -- Present}
-{Electric Mind}{Business and Technology Consulting}{Toronto, ON}
+\resumePromotionSubheading
+{Electric Mind | Business \& Technology Consulting}{Toronto, ON}
+{Software Developer II}{Jan. 2026 -- Present}
+{Software Developer I}{Aug. 2024 -- Dec. 2025}
 \resumeItemListStart
 \clientProjectHeader
 {RBC Investor Services}
@@ -202,8 +212,8 @@
 
 
 \resumeSubheading
-{Software Developer Co-op}{Jan. 2023 -- Apr. 2023}
-{Royal Bank of Canada}{Java, SpringBoot, Maven, Jenkins}{Toronto, ON}
+{Royal Bank of Canada}{Toronto, ON}
+{Software Developer Co-op}{Java, SpringBoot, Maven, Jenkins}{Jan. 2023 -- Apr. 2023}
 \resumeItemListStart
 \resumeItem
 {Enhanced existing \textbf{SpringBoot} APIs powering mainframe verification and transactions at over \textbf{4000} RBC ATMs.}
@@ -214,8 +224,8 @@
 \resumeItemListEnd
 
 \resumeSubheading
-{Software Engineer Co-op/Part-Time}{Jan. 2022 -- Dec. 2022}
-{University Health Network}{Python, MSSQL, React, PHP, LaTeX}{Toronto, ON}
+{University Health Network}{Toronto, ON}
+{Software Engineer Co-op/Part-Time}{Python, MSSQL, React, PHP, LaTeX}{Jan. 2022 -- Dec. 2022}
 \resumeItemListStart
 \resumeItem
 {Developed an automated \textbf{ETL} pipeline in \textbf{Python} and \textbf{pandas} that saved \textbf{10+} research hours weekly by transforming custom clinical surveys into a normalized data model for faster visualization.}
